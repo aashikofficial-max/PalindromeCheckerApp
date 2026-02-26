@@ -3,16 +3,21 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
         String input = "madam";
-        boolean ispalindrome = true;
+        String reversed = "";
 
-        for(int i=0; i < input.length() /2; i++) {
-            if (input.charAt(i) != input.charAt(input.length() - 1 -i)) {
-                ispalindrome = false;
-                break;
+        for(int i=input.length() - 1; i>=0; i--) {
+            reversed = reversed + input.charAt(i);
+            if (input.equals(reversed)) {
+                System.out.println(input + "is a palindrome." );
             }
+            else{
+                System.out.println(input + "is NOT a palindrome.");
+            }
+
         }
 
-        System.out.println(ispalindrome);
-    
+
+
     }
 }
+
